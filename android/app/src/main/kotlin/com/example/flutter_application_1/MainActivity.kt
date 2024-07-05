@@ -195,27 +195,7 @@ class MainActivity: FlutterFragmentActivity() {
                         // 권한이 이미 부여되었다면, 마이크 사용 가능
                     }
 
-//                    Asleep.DeveloperMode.isOn = true
-//                    Asleep.initAsleepConfig(
-//                        context = applicationContext,
-//                        apiKey = "3vocIdIG1j7CBtr2hehvmKfzrrm1p40dtfuocF3t",
-//                        userId = null,
-//                        baseUrl = null,
-//                        callbackUrl = null,
-//                        service = "[input your AppName]",
-//                        object : Asleep.AsleepConfigListener {
-//                            override fun onSuccess(userId: String?, asleepConfig: AsleepConfig?) {
-//                                viewModel.setUserId(userId)
-//                                viewModel.setAsleepConfig(asleepConfig)
-//                                println(viewModel.toString())
-//                                Log.d(">>>> AsleepConfigListener", "onSuccess: userId - $userId")
-//                                Log.d(">>>> AsleepConfigListener", "onSuccess: Developer Id - $userId")
-//
-//                            }
-//                            override fun onFail(errorCode: Int, detail: String) {
-//                                Log.d(">>>> AsleepConfigListener", "onFail: $errorCode - $detail")
-//                            }
-//                        })
+
                    initasleepconfig()
                    stopTracking()
                 }
