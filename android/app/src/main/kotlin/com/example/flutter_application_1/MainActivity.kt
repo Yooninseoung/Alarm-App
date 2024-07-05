@@ -79,7 +79,7 @@ class MainActivity: FlutterFragmentActivity() {
 
         Asleep.initAsleepConfig(
             context = applicationContext,
-            apiKey = "sHDt5WgLsRgU0knI7KnCX7qnAPWzhundB8VMYqgF",
+            apiKey = "", //apikey 입력
             userId = viewModel.userId,
             baseUrl = null,
             callbackUrl = null,
