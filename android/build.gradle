@@ -1,0 +1,46 @@
+
+buildscript {
+    ext.kotlin_version = '1.9.0'
+    dependencies {
+        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.48'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+    }
+}
+
+
+
+plugins {
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android' version '2.48' apply false
+
+}
+
+
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
